@@ -4,7 +4,7 @@ My final assignment for ECE 425 Microprocessor Systems at CSUN, built with Kaila
 
 ![Title slide](docs/slides/slide01.svg)
 
-ECE 425 was my first embedded class: bare-metal C on an ARM Cortex-M4, writing straight to registers in Keil, with no operating system and no vendor library. For the final assignment each team picked its own topic. We combined two ideas from the class list, a music box and a Bluetooth link, and tied together what we had learned in the labs. It is a small assignment, and it was the first time all the pieces worked together in one program.
+ECE 425 was my first embedded class: bare-metal, register-level C on an ARM Cortex-M4 in Keil, using the CMSIS device header, with no operating system and no TivaWare driver library. For the final assignment each team picked its own topic. We combined two ideas from the class list, a music box and a Bluetooth link, and tied together what we had learned in the labs. It is a small assignment, and it was the first time all the pieces worked together in one program.
 
 ![Project overview with the full build](docs/slides/slide02.svg)
 
@@ -16,7 +16,7 @@ ECE 425 was my first embedded class: bare-metal C on an ARM Cortex-M4, writing s
 | **Link** | UART5 at 9600 8N1, HM-10 TXD to PE4 (U5RX) |
 | **Sound** | Buzzer on PC4, square waves timed by Timer0 |
 | **Clock** | 16 MHz default clock (`CLOCK_SETUP` commented out) |
-| **Tools** | Keil uVision, CMSIS `TM4C123GH6PM.h` |
+| **Tools** | Keil uVision, CMSIS `TM4C123GH6PM.h`, Keil startup and `system_TM4C123.c` |
 
 ## Commands
 
@@ -32,7 +32,7 @@ ECE 425 was my first embedded class: bare-metal C on an ARM Cortex-M4, writing s
 
 ## Why the HM-10
 
-The class idea list suggested an HC-05. That module only does Bluetooth Classic, which iPhone apps cannot use. The HM-10 is Bluetooth Low Energy, so it works with iOS through an app like LightBlue. The board never replies, so only the HM-10's TX line is wired.
+The class idea list suggested an HC-05. That module only does Bluetooth Classic, which iPhones do not support for a module like this. The HM-10 is Bluetooth Low Energy, so it works with iOS through an app like LightBlue. The board never replies, so only the HM-10's TXD line is wired. The firmware still sets up PE5 as U5TX, but nothing uses it.
 
 ## How it works
 
