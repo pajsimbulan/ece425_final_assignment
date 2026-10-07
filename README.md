@@ -1,10 +1,10 @@
 # Bluetooth-Controlled Music Player
 
-My final project for ECE 425 Microprocessor Systems at CSUN, built with Kailai Huang in Summer 2026. Ten songs live on a TI TM4C123 LaunchPad. A phone sends one character over Bluetooth Low Energy, and the board plays that song on a buzzer.
+My final assignment for ECE 425 Microprocessor Systems at CSUN, built with Kailai Huang in Summer 2026. Ten songs live on a TI TM4C123 LaunchPad. A phone sends one character over Bluetooth Low Energy, and the board plays that song on a buzzer.
 
 ![Title slide](docs/slides/slide01.svg)
 
-ECE 425 was my first embedded class: bare-metal C on an ARM Cortex-M4, writing straight to registers in Keil, with no operating system and no vendor library. For the final project each team picked its own topic. We combined two ideas from the class list, a music box and a Bluetooth link, and tied together what we had learned in the labs. It is a small project, and it was the first time all the pieces worked together in one program.
+ECE 425 was my first embedded class: bare-metal C on an ARM Cortex-M4, writing straight to registers in Keil, with no operating system and no vendor library. For the final assignment each team picked its own topic. We combined two ideas from the class list, a music box and a Bluetooth link, and tied together what we had learned in the labs. It is a small assignment, and it was the first time all the pieces worked together in one program.
 
 ![Project overview with the full build](docs/slides/slide02.svg)
 
@@ -75,4 +75,4 @@ docs/Project_Proposal.pdf
 4. Build, flash, and listen for the two-note startup chirp.
 5. In LightBlue, connect to the HM-10, set the write format to UTF-8 and write `1`.
 
-Paul Simbulan and Kailai Huang. Prof. Shahnam Mirzaei, CSUN.
+Special thanks to Dr. Shahnam Mirzaei for the class and to my partner Kailai Huang.
